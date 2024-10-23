@@ -1,0 +1,10 @@
+all: personaj
+
+personaj: main.o
+    g++ main.o -o personaj
+
+main.o: main.cpp
+    g++ -c main.cpp
+
+clean:
+    rm *.o personaj
